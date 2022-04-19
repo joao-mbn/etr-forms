@@ -1,6 +1,6 @@
 import React from 'react';
 import {
-  CartesianGrid, Legend, Scatter, ScatterChart, Tooltip, XAxis, YAxis, ZAxis
+  CartesianGrid, Legend, Scatter, ScatterChart, Tooltip, XAxis, YAxis
 } from 'recharts';
 
 const operationLine = [
@@ -42,7 +42,6 @@ export default function Chart(props) {
       <YAxis id='yAxis' type='number' dataKey='y' name='Organic Concentration' unit='g/L'
         label={{ value: 'Organic Concentration', angle: -90, position: 'left' }}
       />
-      <ZAxis type='number' range={[100]} />
       <Tooltip cursor={{ strokeDasharray: '3 3' }} />
       <Legend verticalAlign='top' />
       <Scatter
