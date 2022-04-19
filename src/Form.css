@@ -1,0 +1,25 @@
+.elements-fieldset {
+  display: flex;
+  flex-direction: column;
+  max-width: 30%;
+}
+
+.operation-fieldset {
+  display: flex;
+  flex-direction: column;
+  max-width: 10%;
+}
+
+.buttons-fieldset {
+  display: flex;
+  flex-direction: column;
+}
+
+.element-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.form {
+  display: flex;
+}

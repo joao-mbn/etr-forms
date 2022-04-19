@@ -1,9 +1,0 @@
-.elementsFieldset {
-    display: flex;
-    flex-direction: column;
-}
-
-.element-wrapper {
-    display: flex;
-    flex-direction: row;
-}
