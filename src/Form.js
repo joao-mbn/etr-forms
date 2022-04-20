@@ -127,13 +127,15 @@ class Form extends React.Component {
 
 function OperationVariable(props) {
   return (
-    <>
-      <span>{props.name}</span>
-      <label htmlFor='1'>min</label>
-      <input type="text" key='1' id='1' onChange={(e) => props.onChange({ [props.shortString]: { min: e.target.value } })} />
-      <label htmlFor='2'>max</label>
-      <input type="text" key='2' id='2' onChange={(e) => props.onChange({ [props.shortString]: { max: e.target.value } })} />
-    </>
+    <div className='op-wrapper'>
+      <span className='op-wrapper-title'>{props.name}</span>
+      <label >min:
+        <input className='small-input' type="text" key='1' onChange={(e) => props.onChange({ [props.shortString]: { min: e.target.value } })} />
+      </label>
+      <label >max:
+        <input className='small-input' type="text" key='2' onChange={(e) => props.onChange({ [props.shortString]: { max: e.target.value } })} />
+      </label>
+    </div>
   )
 }
 
@@ -145,10 +147,12 @@ function Element(props) {
         options={props.options}
         onChange={(value) => props.onChange({ element: value })}
       />
-      <label htmlFor='1'>a:</label>
-      <input type="text" key='1' id='1' onChange={(e) => props.onChange({ a: e.target.value })} />
-      <label htmlFor='2'>b:</label>
-      <input type="text" key='2' id='2' onChange={(e) => props.onChange({ b: e.target.value })} />
+      <label >a:
+        <input className='small-input' type="text" key='1' onChange={(e) => props.onChange({ a: e.target.value })} />
+      </label>
+      <label >b:
+        <input className='small-input' type="text" key='2' onChange={(e) => props.onChange({ b: e.target.value })} />
+      </label>
     </>
   )
 }
@@ -156,13 +160,17 @@ function Element(props) {
 function Dropdown(props) {
   return (
     <>
-      <label htmlFor='1'>{props.label}</label>
-      <select id='1' onChange={(e) => {
-        const currentValue = [...e.target.children].find(option => option.selected).value;
-        return props.onChange(currentValue);
-      }}>
-        {props.options.map((option, index) => <option key={index}>{option}</option>)}
-      </select>
+      <label >{props.label}
+        <select
+          className='small-input'
+          onChange={(e) => {
+            const currentValue = [...e.target.children].find(option => option.selected).value;
+            return props.onChange(currentValue);
+          }}
+        >
+          {props.options.map((option, index) => <option key={index}>{option}</option>)}
+        </select>
+      </label>
     </>
   );
 }

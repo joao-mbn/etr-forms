@@ -1,25 +1,79 @@
+fieldset {
+  padding: 5px;
+  border: 0px;
+  margin: 0px;
+}
+
+label {
+  display: flex;
+  align-items: center;
+  flex-basis: 30%;
+  flex-grow: 1;
+  margin-left: 3px;
+}
+
 .elements-fieldset {
+  background-color: white;
   display: flex;
   flex-direction: column;
-  max-width: 30%;
-}
-
-.operation-fieldset {
-  display: flex;
-  flex-direction: column;
-  max-width: 10%;
-}
-
-.buttons-fieldset {
-  display: flex;
-  flex-direction: column;
+  grid-column: 3 / 5;
+  grid-row: 1 / 4;
 }
 
 .element-wrapper {
   display: flex;
-  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.operation-fieldset {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  grid-column: 1 / 3;
+  grid-row: 1 / 5;
+}
+
+.op-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.op-wrapper-title {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 40%;
+}
+
+.buttons-fieldset {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  grid-column: 3 / 5;
+  grid-row: 4;
 }
 
 .form {
-  display: flex;
+  margin: 20px;
+  max-width: 70vw;
+  max-height: 50vh;
+  display: grid;
+  gap: 20px;
+  padding: 20px;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  background-color: blue;
+}
+
+.small-input {
+  width: 50%;
+  box-sizing: border-box;
+  margin-left: 3px;
+  padding: 2px;
+  border: 1px black solid;
+  height: 21px;
+  flex-grow: 1;
 }
